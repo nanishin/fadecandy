@@ -34,7 +34,7 @@ static fcBuffers buffers;
 fcLinearLUT fcBuffers::lutCurrent;
 
 // Double-buffered DMA memory for raw bit planes of output
-static DMAMEM int ledBuffer[LEDS_PER_STRIP * 16];
+static DMAMEM int ledBuffer[LEDS_PER_STRIP * 12];
 static OctoWS2811z leds(LEDS_PER_STRIP, ledBuffer, WS2811_800kHz);
 
 /*

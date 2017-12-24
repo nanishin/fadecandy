@@ -26,8 +26,12 @@
  */
 
 #pragma once
-// By GBRW, max led reduced to 48
+#if defined(SK6812_800kHz) || defined(SK6812_400kHz)
+// For RGBW, max led reduced to 48
 #define LEDS_PER_STRIP          48
+#else
+#define LEDS_PER_STRIP          64
+#endif
 #define LEDS_TOTAL              (LEDS_PER_STRIP * 8)
 #define CHANNELS_TOTAL          (LEDS_TOTAL * 3)
 
