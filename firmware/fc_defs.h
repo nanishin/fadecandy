@@ -26,8 +26,8 @@
  */
 
 #pragma once
-
-#define LEDS_PER_STRIP          64
+// By GBRW, max led reduced to 48
+#define LEDS_PER_STRIP          48
 #define LEDS_TOTAL              (LEDS_PER_STRIP * 8)
 #define CHANNELS_TOTAL          (LEDS_TOTAL * 3)
 

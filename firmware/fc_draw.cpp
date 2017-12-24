@@ -323,5 +323,8 @@ static void FCP_FN(updateDrawBuffer)(unsigned interpCoefficient)
         *(out++) = o3.word;
         *(out++) = o4.word;
         *(out++) = o5.word;
+	// white force off
+        *(out++) = 0;
+        *(out++) = 0;
     }
 }

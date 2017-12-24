@@ -30,10 +30,18 @@ C_FILES = \
 	usb_mem.c \
 	serial1.c
 
+# For RGB
+#LED_CONTROLER = OctoWS2811z.cpp
+#FADECANDY = fadecandy.cpp
+
+# For RGBW
+LED_CONTROLER = OctoSK6812.cpp
+FADECANDY = fadecandy_rgbw.cpp
+
 CPP_FILES = \
-	fadecandy.cpp \
+	$(FADECANDY) \
 	fc_usb.cpp \
-	OctoWS2811z.cpp
+	$(LED_CONTROLER)
 
 # Headers
 INCLUDES = -I.

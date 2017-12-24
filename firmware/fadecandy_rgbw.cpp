@@ -23,7 +23,7 @@
 
 #include <math.h>
 #include <algorithm>
-#include "OctoWS2811z.h"
+#include "OctoSK6812.h"
 #include "arm_math.h"
 #include "fc_usb.h"
 #include "fc_defs.h"
@@ -35,7 +35,7 @@ fcLinearLUT fcBuffers::lutCurrent;
 
 // Double-buffered DMA memory for raw bit planes of output
 static DMAMEM int ledBuffer[LEDS_PER_STRIP * 16];
-static OctoWS2811z leds(LEDS_PER_STRIP, ledBuffer, WS2811_800kHz);
+static OctoSK6812 leds(LEDS_PER_STRIP, ledBuffer, SK6812_800kHz);
 
 /*
  * Residuals for temporal dithering. Usually 8 bits is enough, but
